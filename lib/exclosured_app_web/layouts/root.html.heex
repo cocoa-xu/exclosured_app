@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <title>Exclosured - Rust to WASM in Phoenix LiveView</title>
+    <meta name="description" content="Compile Rust to WebAssembly, run it in your users' browsers, talk to it from Phoenix LiveView." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      html { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <%= @inner_content %>
+  </body>
+</html>
