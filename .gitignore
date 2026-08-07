@@ -25,6 +25,5 @@ erl_crash.dump
 # macOS
 .DS_Store
 
-# extra
-extra/
+# Deployment recipe for the bare-metal host — tracked; keep secrets out of it.
 
