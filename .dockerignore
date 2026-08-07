@@ -1,0 +1,14 @@
+.git
+.github
+.elixir_ls
+
+_build
+deps
+doc
+cover
+tmp
+erl_crash.dump
+*.ez
+
+# Deployment scripts and units for the old bare-metal host.
+extra
