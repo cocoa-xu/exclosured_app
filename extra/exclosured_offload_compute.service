@@ -1,0 +1,16 @@
+[Unit]
+Description=Exclosured Example: offload_compute (port 5005)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=exclosured
+Group=exclosured
+Environment=PATH=/home/cocoa/.nvm/versions/node/v24.14.0/bin:/var/lib/exclosured/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/var/lib/exclosured/app/extra/run_example.sh offload_compute
+WorkingDirectory=/var/lib/exclosured/app/extra/exclosured/examples/offload_compute
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
